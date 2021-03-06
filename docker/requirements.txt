@@ -1,0 +1,15 @@
+batchgenerators
+numpy
+python-dotenv
+SimpleITK
+tqdm
+wandb
+yacs
+# used in jupyter notebooks
+jupyter
+matplotlib
+scipy
+# dev
+flake8
+isort
+yapf

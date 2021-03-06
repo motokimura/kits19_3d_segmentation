@@ -1,0 +1,28 @@
+version: "2.3"
+services:
+  kits19:
+    runtime: nvidia
+    build:
+      context: ./docker
+    volumes:
+      - ${HOME}/data:/data
+      - ${PWD}:/work
+    ports:
+      - 8888:8888  # jupyter
+    tty: true
+    ipc: host  # necessary to avoid torch dataloader error
+  kits19_cuda10:
+    runtime: nvidia
+    build:
+      context: ./docker
+      args:
+        CUDA: 10.1
+        CUDNN: 7
+        PYTORCH: 1.6.0
+    volumes:
+      - ${HOME}/data:/data
+      - ${PWD}:/work
+    ports:
+      - 8888:8888  # jupyter
+    tty: true
+    ipc: host  # necessary to avoid torch dataloader error

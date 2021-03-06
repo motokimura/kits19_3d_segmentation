@@ -1,0 +1,3 @@
+TRAIN:
+  OPTIMIZER: 'adam'
+  LR: 3e-4
