@@ -1,5 +1,8 @@
 import numpy as np
-from batchgenerators.transforms import Compose, NumpyToTensor, RenameTransform
+from batchgenerators.transforms.abstract_transforms import Compose
+from batchgenerators.transforms.utility_transforms import NumpyToTensor, RenameTransform
+
+
 from batchgenerators.transforms.color_transforms import (BrightnessMultiplicativeTransform,
                                                          ContrastAugmentationTransform, GammaTransform)
 from batchgenerators.transforms.noise_transforms import GaussianNoiseTransform

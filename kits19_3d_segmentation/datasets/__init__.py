@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from batchgenerators.dataloading import MultiThreadedAugmenter
+from batchgenerators.dataloading.multi_threaded_augmenter import MultiThreadedAugmenter
 
 from ..transforms import get_transforms
 from .kits19 import KiTS19DataLoader
